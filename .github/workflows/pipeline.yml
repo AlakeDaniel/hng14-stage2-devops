@@ -165,7 +165,7 @@ jobs:
 
       - name: Start full stack
         run: |
-          docker-compose up -d --build
+          docker compose up -d --build
           echo "Waiting for services to be healthy..."
           sleep 40
 
@@ -195,7 +195,7 @@ jobs:
 
       - name: Tear down stack
         if: always()
-        run: docker-compose down -v
+        run: docker compose down -v
 
   deploy:
     runs-on: ubuntu-latest
