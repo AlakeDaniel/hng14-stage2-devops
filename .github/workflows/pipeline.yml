@@ -69,7 +69,7 @@ jobs:
         run: |
           cd api
           pip install -r requirements.txt
-          pip install pytest pytest-cov fakeredis httpx
+          pip install pytest pytest-cov fakeredis "httpx==0.24.1"
 
       - name: Run tests
         run: |
